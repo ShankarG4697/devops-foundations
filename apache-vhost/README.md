@@ -47,4 +47,14 @@ sudo apache2ctl configtest
 ```
 sudo systemctl reload apache2
 ```
-
+---
+### Removing Apache
+```
+sudo systemctl stop apache2
+sudo apt purge apache2 apache2-utils apache2-bin -y
+sudo apt autoremove -y
+```
+### Verify Removed
+```
+sudo ss -tlnp | grep :80
+```
