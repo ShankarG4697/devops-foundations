@@ -1,5 +1,15 @@
 ## Setup Steps
 
+## Installing Ngnix
+
+### Update server and install Ngnix
+```
+sudo apt update
+sudo apt install nginx -y
+sudo systemctl status nginx
+```
+---
+
 ### 1. Create the config file
 
 ```
@@ -38,3 +48,15 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
+---
+### Removing Ngnix server
+```
+sudo systemctl stop nginx
+sudo apt purge nginx nginx-common -y
+sudo apt autoremove -y
+```
+
+### Verify Gone
+```
+sudo ss -tlnp | grep :80
+```

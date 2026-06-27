@@ -1,6 +1,11 @@
 ## Apache Setup
 ## Setup Steps
-
+### Insatall Apache VHOST
+```
+sudo apt update
+sudo apt install apache2 -y
+sudo systemctl status apache2
+```
 ### 1. Create the config file
 
 ```
